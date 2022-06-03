@@ -1,0 +1,54 @@
+Create Singly Linked List:
+    SLL enqueue:
+        if no nodes, the head will equal the new node
+        if there are nodes:
+            start at head and itireate through until nodes next = None 
+            update pointers 
+            update list size
+        
+    SLL dequeue head:
+        update head pointer so head pointer = head pointer.next 
+        update list size 
+
+    dequeue method based on KB:
+        take in amount of KB needed
+        go through all blocks in SLL:
+        if no blocks:
+            say blocks list is empty and carry out page replacement 
+            compare blocks total KB with amount of KB needed:
+            if they blockKb >= amount of KB needed:
+                choose this block and dequeue it 
+            if not:
+                go to the next block 
+            if all blocks cant fulfill request:
+                reques too big = error message 
+    
+    return nodes method:
+        returns blocks Kb in form of list 
+    
+    size of nodes:
+        return amount of blocks in SLL at current moment 
+
+Create Block class:
+    block class contains following instance variables 
+        id, block size, maximum pages it can hold, the pages(implemented as a list), amount of KB all pages add up to be, next pointer for SLL
+    
+    second chance algorithm:
+        iterate through page list:
+            chack to see which page state = 0
+            if page state = 0:
+                replace page 
+    
+    once page replacement finished, enqueue block onto SLL 
+
+Create Page class:
+    page class has following instance variables:
+        size, id, state
+        size is fixed at 4KB 
+        state can be changed and accessed so getter and setter method
+
+
+
+            
+
+
